@@ -54,8 +54,8 @@ public class Calculator implements CalcExecutor {
 
                 for (int i = 0; i < valuesArabian.size() - 1; i++) {
                     if (valuesArabian.get(i + 1) != null) {
-                       result = Integer.toString(engine.applyExpression(operators.pop(),
-                               valuesArabian.get(i), valuesArabian.get(i + 1)));
+                        result = Integer.toString(engine.applyExpression(operators.pop(),
+                                valuesArabian.get(i), valuesArabian.get(i + 1)));
                     } else continue;
                 }
 
@@ -63,7 +63,7 @@ public class Calculator implements CalcExecutor {
 
                 for (int i = 0; i < valuesRoman.size() - 1; i++) {
                     if (valuesRoman.get(i + 1) != null) {
-                       result = RomanNumbers.transformNumberToRoman(engine.applyExpression(operators.pop(),
+                        result = RomanNumbers.transformNumberToRoman(engine.applyExpression(operators.pop(),
                                 valuesRoman.get(i), valuesRoman.get(i + 1)));
                     } else continue;
                 }

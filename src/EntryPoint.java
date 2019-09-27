@@ -9,6 +9,6 @@ public class EntryPoint {
 
         String inputFromUser = reader.readLine();
         Calculator calculator = new Calculator(inputFromUser);
-            System.out.println(calculator.executeExpression());
+        System.out.println(calculator.executeExpression());
     }
 }

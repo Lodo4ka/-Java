@@ -25,7 +25,7 @@ public class RomanNumbers {
             }
         }
         sum += map.get(ir.charAt(ir.length() - 1));
-        if(sum > 10 && sum < 0) {
+        if (sum > 10 || sum < 0) {
             throw new NumberError();
         } else {
             return sum;
@@ -34,7 +34,7 @@ public class RomanNumbers {
 
     public static String transformNumberToRoman(Integer num) {
         TreeMap<Integer, String> map = new TreeMap<>(Collections.reverseOrder());
-         {
+        {
             map.put(1000, "M");
             map.put(900, "CM");
             map.put(500, "D");
@@ -50,7 +50,7 @@ public class RomanNumbers {
             map.put(1, "I");
         }
         StringBuilder roman = new StringBuilder("");
-        for (Integer i: map.keySet()) {
+        for (Integer i : map.keySet()) {
             for (int j = 1; j <= num / i; j++) {
                 roman.append(map.get(i));
             }
